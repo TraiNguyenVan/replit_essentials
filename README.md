@@ -19,6 +19,5 @@ Minimal C++17 starter for Replit — build with `make`, run with `make run-50`.
 make
 ./build/cpp/demo
 # or
-make run-50
-make clean
+make clean && make run
 ```

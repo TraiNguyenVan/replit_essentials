@@ -3,7 +3,7 @@ CXX      := g++
 CXXFLAGS := -std=c++17 -Wall -O2 -Iinclude
 
 
-SRCDIR   := ./src
+SRCDIR   := ./src_tmp
 BUILDDIR := build/cpp
 TARGET   := $(BUILDDIR)/demo
 SRC      := $(wildcard $(SRCDIR)/*.cpp)
@@ -19,7 +19,7 @@ $(TARGET): $(SRC) $(HEADERS) | $(BUILDDIR)
 
 run: $(TARGET)
 	./$(TARGET)
-
+	
 clean:
 	rm -rf $(BUILDDIR)
 

@@ -1,14 +1,11 @@
-#include <iostream>
+#include "../include/bubbleSort.hpp"
 
-using namespace std;
-
-// swap
 void swap(int* a, int* b) {
     int temp = *a;
     *a = *b;
     *b = temp;
 }
-// Bubble sort
+
 void BubbleSort(int A[], int n) {
     bool swapped;
     for (int i = 0; i < n - 1; i++) {
@@ -23,18 +20,4 @@ void BubbleSort(int A[], int n) {
             break;
         }
     }
-}
-
-int main(int argc, char* argv[]) {
-    int n, a[(int)1e6];
-    cin >> n;
-    for (int i = 0; i < n; i++) {
-        cin >> a[i];
-    }
-    BubbleSort(a, n);
-    for (int i = 0; i < n; i++) {
-        cout << a[i] << " ";
-    }
-    cout << "\n";
-    return 0;
 }
