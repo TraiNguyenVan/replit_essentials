@@ -18,7 +18,8 @@ $(TARGET): $(SRC) $(HEADERS) | $(BUILDDIR)
 	$(CXX) $(CXXFLAGS) $(SRC) -o $(TARGET)
 
 run: $(TARGET)
-	./$(TARGET)
+	python3 script/generate_dataset.py
+	./$(TARGET) < data/dataset.txt
 
 clean:
 	rm -rf $(BUILDDIR)

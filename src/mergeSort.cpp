@@ -4,7 +4,7 @@
 #include "../include/mergeSort.hpp"
 // merge
 void mix(int a[], int left, int middle, int right) {
-    int temp[right - left + 1];
+    int* temp = new int[right - left + 1];
     int i = left;
     int j = middle + 1;
     int k = 0;
@@ -24,6 +24,7 @@ void mix(int a[], int left, int middle, int right) {
     for (int x = left; x <= right; x++) {
         a[x] = temp[x - left];
     }
+    delete[] temp;
 }
 
 // split/divide
