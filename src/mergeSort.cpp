@@ -1,4 +1,6 @@
-#pragma once
+#ifndef MERGE_SORT_HPP
+#define MERGE_SORT_HPP
+
 #include "../include/mergeSort.hpp"
 // merge
 void mix(int a[], int left, int middle, int right) {
@@ -33,3 +35,4 @@ void divide(int a[], int left, int right) {
         mix(a, left, middle, right);
     }
 }
+#endif
